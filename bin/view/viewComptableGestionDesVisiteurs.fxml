@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneId" prefHeight="420.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerComptableListeFiches">
+   <children>
+      <Pane layoutX="608.0" layoutY="139.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TextField id="txtfieldNom" layoutX="38.0" layoutY="2.0" promptText="Nom" />
+            <TextField id="txtfieldPrénom" layoutX="38.0" layoutY="41.0" promptText="Prénom" />
+            <TextField id="txtfieldAdresse" layoutX="38.0" layoutY="81.0" promptText="Adresse" />
+            <TextField id="txtfieldCodePostal" layoutX="38.0" layoutY="118.0" promptText="Code Postal" />
+            <TextField id="txtfieldVille" layoutX="38.0" layoutY="153.0" promptText="Ville" />
+            <DatePicker id="datepickerEmbauche" layoutX="38.0" layoutY="188.0" prefHeight="25.0" prefWidth="149.0" promptText="Date d’embauche" />
+         </children></Pane>
+      <ImageView fitHeight="71.0" fitWidth="152.0" layoutX="856.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gsb.png" />
+         </image>
+      </ImageView>
+      <Button id="btnAjouterFicheVisiteurs" layoutX="821.0" layoutY="139.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="Ajouter" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnSupprimerListeFichesComptable" layoutX="821.0" layoutY="279.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="Supprimer" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnModifierFicheComptable" layoutX="821.0" layoutY="184.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="Modifier" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="359.0" layoutY="50.0" />
+      <Label id="lblGestionDesVisiteurs" layoutX="342.0" layoutY="14.0" text="Gestion des visiteurs ">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button id="btnQuitterGestionVisiteurs" fx:id="btnQuitterGestionVisiteurs" layoutX="821.0" layoutY="324.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnQuitterGestionVisiteursClick" prefHeight="25.0" prefWidth="133.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label id="lblNomComptable" layoutX="28.0" layoutY="58.0" text="Nom comptable : &quot;Profil&quot; ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label id="lblFiche" layoutX="28.0" layoutY="92.0" text="Fiche : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView id="tableListeFichesComptable1" layoutX="14.0" layoutY="139.0" prefHeight="220.0" prefWidth="587.0">
+         <columns>
+            <TableColumn id="colNomFiche" editable="false" prefWidth="76.0" sortable="false" text="Nom " />
+            <TableColumn id="colPrénomFiche" prefWidth="94.0" text="Prénom" />
+            <TableColumn id="colAdresseFiche" prefWidth="94.0" text="Adresse" />
+            <TableColumn id="colCodePostalFiche" prefWidth="94.0" text="Code Postal" />
+            <TableColumn id="colVilleFiche" prefWidth="94.0" text="Ville" />
+            <TableColumn id="colDateEmbaucheFiche" prefWidth="134.0" text="Date d'embauche" />
+         </columns>
+      </TableView>
+      <Button id="btnEnregistrerFicheVisiteurs" layoutX="821.0" layoutY="230.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="Enregistrer" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

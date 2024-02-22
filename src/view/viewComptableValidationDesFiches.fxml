@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="loader" fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerComptableListeFiches">
+   <children>
+      <Pane layoutX="693.0" layoutY="112.0" prefHeight="368.0" prefWidth="280.0">
+         <children>
+            <Button id="btnValiderFiche" layoutX="45.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnValiderFicheClick" prefHeight="52.0" prefWidth="185.0" text="Valider fiche" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="btnOuvrirFiche" layoutX="45.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonOuvrirFicheClick" prefHeight="52.0" prefWidth="185.0" text="Ouvrir fiche" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="btnQuitterValidation" fx:id="btnQuitterValidation" layoutX="45.0" layoutY="316.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnQuitterValidationClick" prefHeight="52.0" prefWidth="185.0" text="Quitter" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="btnGestionVisiteurs" fx:id="btnGestionVisiteurs" layoutX="45.0" layoutY="212.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnGestionVisiteursClick" prefHeight="52.0" prefWidth="185.0" text="Gestion visiteurs" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <ImageView fitHeight="71.0" fitWidth="152.0" layoutX="856.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gsb.png" />
+         </image>
+      </ImageView>
+      <TableView id="tableListeFicheFraisComptable" fx:id="tableListeFichesComptable" layoutX="45.0" layoutY="118.0" prefHeight="362.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="colIDFiche" prefWidth="82.0" text="ID Fiche" />
+          <TableColumn fx:id="colNomFiche" editable="false" prefWidth="76.0" sortable="false" text="Nom " />
+          <TableColumn fx:id="colPrénomFiche" prefWidth="94.0" text="Prénom" />
+          <TableColumn fx:id="colMoisFiche" prefWidth="94.0" text="Mois" />
+          <TableColumn fx:id="colAnnéeFiche" prefWidth="94.0" text="Année" />
+          <TableColumn fx:id="colEtatFiche" prefWidth="94.0" text="Etat" />
+          <TableColumn fx:id="colMontantFiche" prefWidth="94.0" text="Montant" />
+        </columns>
+      </TableView>
+      <Label layoutX="359.0" layoutY="50.0" />
+      <Label id="lblValidationFiche" layoutX="251.0" layoutY="14.0" text="Validation des fiches de frais ">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label id="lblNomComptable" layoutX="43.0" layoutY="57.0" text="Nom Comptable : &quot;Profil&quot;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label id="lblFiche" layoutX="43.0" layoutY="85.0" text="Fiche : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

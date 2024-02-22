@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVisiteurListeFiches">
+   <children>
+      <ImageView fitHeight="174.0" fitWidth="233.0" layoutX="701.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gsb.png" />
+         </image>
+      </ImageView>
+      <Button id="closeButtonListeFichesComptable" fx:id="btnQuitterListeFichesVisiteur" layoutX="664.0" layoutY="420.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnQuitterListeFichesVisiteurClick" prefHeight="40.0" prefWidth="307.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableListeFichesVisiteur" layoutX="29.0" layoutY="91.0" prefHeight="397.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="colIdFiche" prefWidth="75.0" text="Id Fiche" />
+            <TableColumn fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
+            <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
+            <TableColumn fx:id="colMontantFiche" prefWidth="174.0" text="Montant" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="14.0" prefHeight="30.0" prefWidth="203.0" text="Nom visiteur - &quot;Profil&quot;">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button id="btnModifierFiche" fx:id="btnModifierFiche" layoutX="664.0" layoutY="256.0" mnemonicParsing="false" onAction="#btnModifierFicheClick" prefHeight="40.0" prefWidth="307.0" text="Modifier fiche" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnNouvelleFiche" fx:id="btnNouvelleFiche" layoutX="664.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnNouvelleFicheClick" prefHeight="40.0" prefWidth="307.0" text="Créer nouvelle fiche" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnSupprimerFiche" fx:id="btnSupprimerFiche" layoutX="664.0" layoutY="310.0" mnemonicParsing="false" onAction="#btnSupprimerFicheClick" prefHeight="40.0" prefWidth="307.0" text="Suppprimer fiche" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnOuvrirFicheComptable" fx:id="btnCloturerFicheVisiteur" layoutX="664.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnCloturerFicheVisiteurClick" prefHeight="40.0" prefWidth="307.0" text="Clôturer fiche" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="29.0" layoutY="54.0" prefHeight="30.0" prefWidth="76.0" text="Fiches :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
